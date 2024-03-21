@@ -99,9 +99,11 @@ export const headerData = {
     },
   ],
   actions: 
-  [{ text: 'Sign Up', href: 'https://github.com/onwidget/astrowind', target: '_blank' },
-  { text: 'Sign In', href: 'https://github.com', target: '_blank'}
-],
+  [
+    
+    { text: 'Sign Up', href: 'https://github.com/onwidget/astrowind', target: '_blank' },
+    { text: 'Sign In', href: 'https://github.com', target: '_blank'}
+  ],
 };
 
 export const footerData = {

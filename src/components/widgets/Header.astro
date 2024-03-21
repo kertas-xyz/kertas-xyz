@@ -30,7 +30,7 @@ export interface Props {
   isDark?: boolean;
   isFullWidth?: boolean;
   showToggleTheme?: boolean;
-  showRssFeed?: boolean;
+  showLangList?: boolean;
   position?: string;
 }
 
@@ -42,7 +42,7 @@ const {
   isDark = false,
   isFullWidth = false,
   showToggleTheme = false,
-  showRssFeed = false,
+  showLangList = false,
   position = "center",
 } = Astro.props;
 
@@ -131,13 +131,15 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
         <div class="flex">
           {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
           {
-            showRssFeed && (
+            
+            showLangList && (
+              
               <a
                 class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
                 aria-label="RSS Feed"
                 href={getAsset('/rss.xml')}
               >
-                <Icon name="tabler:rss" class="w-5 h-5" />
+                <Icon name="openmoji:flag-indonesia" class="w-5 h-5" />
               </a>
             )
           }
